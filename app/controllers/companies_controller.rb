@@ -20,7 +20,7 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       format.csv { send_data generate_csv(data), filename: "items-#{Date.today}.csv" }
     end
-    redirect_to root_url
+    
   end
 
   private
